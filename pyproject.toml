@@ -1,14 +1,22 @@
 [tool.poetry]
-name = "gsheets-function-usage"
+name = "gsheets-formula-usage"
 version = "0.1.0"
-description = ""
+description = "Scrape formulas from Google sheets."
 authors = ["Pranas Ziaukas <pranas@balena.io>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+click = "^7.1.2"
+google-api-python-client = "^1.10.0"
+google-auth-oauthlib = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+flake8 = "^3.8.3"
+pydocstyle = "^5.0.2"
+
+[tool.poetry.scripts]
+gsheets-fu = 'gsheets_formula_usage:cli.get_usage'
 
 [build-system]
 requires = ["poetry>=0.12"]
